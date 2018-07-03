@@ -2,7 +2,7 @@ package abstract_sample;
 
 public class AbstractSample {
 	public static void main(String[] args) {
-		Member[] members = {	// ’ŠÛƒNƒ‰ƒX‚ğƒX[ƒp[ƒNƒ‰ƒX‚Æ‚µ‚Äˆµ‚¦‚é
+		Member[] members = {	// æŠ½è±¡ã‚¯ãƒ©ã‚¹ã‚’ã‚¹ãƒ¼ãƒ‘ãƒ¼ã‚¯ãƒ©ã‚¹ã¨ã—ã¦æ‰±ãˆã‚‹
 				new NormalMember("yamada"),
 				new SpecialMember("sato")};
 		for (Member member : members) {
@@ -12,24 +12,24 @@ public class AbstractSample {
 
 }
 
-abstract class Member {	// ’ŠÛƒNƒ‰ƒX
+abstract class Member {	// ï¿½ï¿½ï¿½ÛƒNï¿½ï¿½ï¿½X
 	private String name;
 	public Member(String name) {
 		this.name = name;
 	}
 	public void print() {
-		System.out.println(name + "‚ÌAŠ„ˆø—¦‚Í" + getDiscountRate());
+		System.out.println(name + "ã®ã€å‰²å¼•ç‡ã¯" + getDiscountRate());
 	}
-	abstract double getDiscountRate();	// ’ŠÛƒƒ\ƒbƒh
+	abstract double getDiscountRate();	// æŠ½è±¡ãƒ¡ã‚½ãƒƒãƒ‰
 }
 
-//’ŠÛƒNƒ‰ƒX‚ğŒp³
+// æŠ½è±¡ã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿
 class NormalMember extends Member {
 	public NormalMember(String name) {
 		super(name);
 	}
 
-	// ’ŠÛƒƒ\ƒbƒh‚ÌÀ‘•
+	// æŠ½è±¡ãƒ¡ã‚½ãƒƒãƒ‰ã®å®Ÿè£…
 	@Override
 	double getDiscountRate() {
 		return 0;

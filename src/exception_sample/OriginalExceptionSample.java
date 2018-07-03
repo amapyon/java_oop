@@ -16,13 +16,13 @@ class Member {
 	private int age;
 	public void setAge(int newAge) throws OutOfAge {
 		if (newAge < 0) {
-			throw new OutOfAge("�N��}�C�i�X");
+			throw new OutOfAge("年齢がマイナス");
 		}
 		age = newAge;
 	}
 }
 
-// Exception���p������
+// Exceptionを継承して独自の例外クラスを作成
 class OutOfAge extends Exception {
 	OutOfAge(String message) {
 		super(message);

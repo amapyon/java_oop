@@ -10,17 +10,17 @@ public class LambdaSample {
 		members.add(new Member("sato"));
 		members.add(new Member("sasaki"));
 		
-		// ƒ‰ƒ€ƒ_‚ðŽg‚í‚È‚¢‘‚«•û
+		// ãƒ©ãƒ ãƒ€ã‚’ä½¿ã‚ãªã„æ›¸ãæ–¹
 		for (Member member : members) {
 			member.print();
 		}
 		
-		// ƒRƒŒƒNƒVƒ‡ƒ“‚ÌforEach()ƒƒ\ƒbƒh‚Æ
-		// ƒ‰ƒ€ƒ_‚ðŽg—p‚·‚é
+		// ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã®forEach()ãƒ¡ã‚½ãƒƒãƒ‰ã¨
+		// ãƒ©ãƒ ãƒ€ã‚’ä½¿ç”¨ã™ã‚‹
 		members.forEach(m -> m.print());
 		
-		// ƒ‰ƒ€ƒ_‚ÅÈ—ª‚µ‚È‚¢‘‚«•û
-		// ƒuƒƒbƒN“à‚É‚Í•¡”s‹Lq‚Å‚«‚é
+		// ãƒ©ãƒ ãƒ€ã§çœç•¥ã—ãªã„æ›¸ãæ–¹
+		// ãƒ–ãƒ­ãƒƒã‚¯å†…ã«ã¯è¤‡æ•°è¡Œè¨˜è¿°ã§ãã‚‹
 		members.forEach((Member m) -> {
 			m.print();
 		});

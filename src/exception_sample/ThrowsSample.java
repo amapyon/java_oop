@@ -17,12 +17,12 @@ public class ThrowsSample {
 		}
 	}
 	
-	// ƒƒ\ƒbƒh‚Å”­¶‚µ‚ÄAƒƒ\ƒbƒh“à‚Åˆ—‚Å‚«‚È‚¢—áŠO‚ğ—ñ‹L‚·‚é
+	// ãƒ¡ã‚½ãƒƒãƒ‰ã§ç™ºç”Ÿã—ã¦ã€ãƒ¡ã‚½ãƒƒãƒ‰å†…ã§å‡¦ç†ã§ããªã„ä¾‹å¤–ã‚’åˆ—è¨˜ã™ã‚‹
 	private static void method() throws FileNotFoundException, EOFException {
-		if (false) {
+		if (true) {
 			throw new FileNotFoundException();
 		}
-		if (false) {
+		if (true) {
 			throw new EOFException();
 		}
 	}

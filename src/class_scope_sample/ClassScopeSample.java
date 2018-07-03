@@ -4,26 +4,26 @@ public class ClassScopeSample {
 
 	public static void main(String[] args) {
 		Member yamada = new Member("yamada");
-		System.out.println("Œ»İ‚Ì“o˜^‰ïˆõ”:" + Member.getCount()); // ƒNƒ‰ƒX
+		System.out.println("ç¾åœ¨ã®ç™»éŒ²ä¼šå“¡æ•°:" + Member.getCount()); // ã‚¯ãƒ©ã‚¹
 		Member sato = new Member("sato");
-		System.out.println("Œ»İ‚Ì“o˜^‰ïˆõ”:" + Member.getCount());
-		yamada.print(); // ƒCƒ“ƒXƒ^ƒ“ƒX
+		System.out.println("ç¾åœ¨ã®ç™»éŒ²ä¼šå“¡æ•°:" + Member.getCount());
+		yamada.print(); // ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
 		sato.print();
 	}
 
 }
 
 class Member {
-	private static int count = 0;	// ƒNƒ‰ƒXƒXƒR[ƒv‚ÌƒtƒB[ƒ‹ƒh
+	private static int count = 0;	// ã‚¯ãƒ©ã‚¹ã‚¹ã‚³ãƒ¼ãƒ—ã®ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
 	private String name;
 	private int id;
 
 	public Member(String name) {
-		this.name = name; // this‚ğ•t‚¯‚é‚±‚Æ‚ÅAƒtƒB[ƒ‹ƒh‚Æ‰¼ˆø”‚ğ‹æ•Ê
+		this.name = name; // thisã‚’ä»˜ã‘ã‚‹ã“ã¨ã§ã€ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã¨ä»®å¼•æ•°ã‚’åŒºåˆ¥
 		id = ++count;
 	}
 
-	public static int getCount() {	// ƒNƒ‰ƒXƒXƒR[ƒv‚Ìƒƒ\ƒbƒh
+	public static int getCount() {	// ã‚¯ãƒ©ã‚¹ã‚¹ã‚³ãƒ¼ãƒ—ã®ãƒ¡ã‚½ãƒƒãƒ‰
 		return count;
 	}
 

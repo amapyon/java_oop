@@ -1,37 +1,38 @@
 package extends_sample;
 
 public class OverrideSample {
-	public static void main(String[] args) {
-		MailMember mailMember = new MailMember("yamada", "yama001@esm.co.jp");
-		mailMember.printDetail();
-		mailMember.printDetails();
-		Member member = mailMember; // ƒX[ƒp[ƒNƒ‰ƒX‚ÌŒ^‚Ì•Ï”‚É‘ã“ü‰Â”\
-		member.printDetail();
-		// member.printDetails(); // MemberƒNƒ‰ƒX‚ÉAprintDetails()‚Í’è‹`‚³‚ê‚Ä‚¢‚È‚¢
-	}
+    public static void main(String[] args) {
+        MailMember mailMember = new MailMember("yamada", "yama001@esm.co.jp");
+        mailMember.printDetail();
+        mailMember.printDetails();
+        Member member = mailMember; // ã‚¹ãƒ¼ãƒ‘ãƒ¼ã‚¯ãƒ©ã‚¹ã®å‹ã®å¤‰æ•°ã«ä»£å…¥å¯èƒ½
+        member.printDetail();
+        // member.printDetails(); // Memberã‚¯ãƒ©ã‚¹ã«ã€printDetails()ã¯å®šç¾©ã•ã‚Œã¦ã„ãªã„
+    }
 }
 
 class Member {
-	private String name;
-	public Member(String name) {
-		this.name = name;
-	}
-	public String getName() {
-		return name;
-	}
-	public void printDetail() {
-		System.out.println("Name=" + name);
-	}
+    private String name;
+    public Member(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void printDetail() {
+        System.out.println("Name=" + name);
+    }
 }
 
 class MailMember extends Member {
-	private String email;
-	public MailMember(String name, String email) {
-		super(name); // ƒX[ƒp[ƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^ŒÄ‚Ño‚µ
-		this.email = email;
-	}	
-	// @Override	// ‚±‚Ìs‚ğ‘‚­‚ÆƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚É‚È‚é
-	public void printDetails() { // ƒƒ\ƒbƒh–¼‚ªˆÙ‚È‚é‚Ì‚ÅƒI[ƒo[ƒ‰ƒCƒh‚µ‚Ä‚¢‚È‚¢
-		System.out.println("Name=" + getName() + ", Email=" + email);
-	}
+    private String email;
+    public MailMember(String name, String email) {
+        super(name); // ã‚¹ãƒ¼ãƒ‘ãƒ¼ã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿å‘¼ã³å‡ºã—
+        this.email = email;
+    }
+
+    // @Override // ã“ã®è¡Œã‚’æ›¸ãã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹
+    public void printDetails() { // ãƒ¡ã‚½ãƒƒãƒ‰åãŒç•°ãªã‚‹ã®ã§ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ã¦ã„ãªã„
+        System.out.println("Name=" + getName() + ", Email=" + email);
+    }
 }

@@ -1,56 +1,61 @@
 package interface_sample;
 
 public class InterfaceSample {
-	public static void main(String[] args) {
-		Member yamada = new Member("yamada");
-		Member sato = new Member("sato");
-		School todai = new School("Hongo"); 
-		{
-			Member[] members = {yamada, sato};
-			for (Member member : members) {
-				member.hello();	// MemberƒNƒ‰ƒX‚Ìƒƒ\ƒbƒh‚ª—˜—p‚Å‚«‚é
-				member.print();
-			}
-		}
-		{
-			// PrintableƒCƒ“ƒ^ƒtƒF[ƒX‚Ì”z—ñ
-			Printable[] members = {todai, yamada, sato};
-			for (Printable member : members){
-				member.print();	// PrintableƒCƒ“ƒ^ƒtƒF[ƒX‚Ìƒƒ\ƒbƒh‚Ì‚İ—˜—p‰Â
-			}
-		}
-	}
+    public static void main(String[] args) {
+        Member yamada = new Member("yamada");
+        Member sato = new Member("sato");
+        School todai = new School("Hongo");
+        {
+            Member[] members = { yamada, sato };
+            for (Member member : members) {
+                member.hello(); // Memberã‚¯ãƒ©ã‚¹ã®ãƒ¡ã‚½ãƒƒãƒ‰ãŒåˆ©ç”¨ã§ãã‚‹
+                member.print();
+            }
+        }
+        {
+            // Printableã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®é…åˆ—
+            Printable[] members = { todai, yamada, sato };
+            for (Printable member : members) {
+                member.print(); // Printableã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®ãƒ¡ã‚½ãƒƒãƒ‰ã®ã¿åˆ©ç”¨å¯
+            }
+        }
+    }
 }
 
 interface Printable {
-	void print();
+    void print();
 }
 
-class Member implements Printable { // ƒCƒ“ƒ^ƒtƒF[ƒX‚ÌÀ‘•
-	private String name;
-	public Member(String name) {
-		this.name = name;
-	}
-	// printƒƒ\ƒbƒh‚ª‚È‚¢‚ÆƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚É‚È‚é
-	public void print() {
-		System.out.println("I am " + name);
-	}
-	public void hello() {
-		System.out.println("Hello!");
-	}
+class Member implements Printable { // ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã®å®Ÿè£…
+    private String name;
+
+    public Member(String name) {
+        this.name = name;
+    }
+
+    // printãƒ¡ã‚½ãƒƒãƒ‰ãŒãªã„ã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹
+    public void print() {
+        System.out.println("I am " + name);
+    }
+
+    public void hello() {
+        System.out.println("Hello!");
+    }
 }
 
 class School implements Printable {
-	private String address;
-	public School(String address) {
-		this.address = address;
-	}
-	// printƒƒ\ƒbƒh‚ª‚È‚¢‚ÆƒRƒ“ƒpƒCƒ‹ƒGƒ‰[‚É‚È‚é
-	public void print() {
-		System.out.println("Location is " + address);
-	}
-	public void lesson() {
-		System.out.println("Let's study!");
-	}	
-}
+    private String address;
 
+    public School(String address) {
+        this.address = address;
+    }
+
+    // printãƒ¡ã‚½ãƒƒãƒ‰ãŒãªã„ã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ã«ãªã‚‹
+    public void print() {
+        System.out.println("Location is " + address);
+    }
+
+    public void lesson() {
+        System.out.println("Let's study!");
+    }
+}
